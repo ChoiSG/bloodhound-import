@@ -23,3 +23,10 @@ Example:
 `bloodhound-import -du neo4j -dp neo4j ~/Desktop/SessionLoop_20190115133114*.json`
 
 If the -du and -dp options are not specified, the tool will try to auto detect these values from the bloodhound config file.
+
+## MISC 
+`bloodhound-import` will execute successfully, but will return a `coroutine 'main' was never awaited` error. If that error bugs you, just run the `__main__.py` file directly from the directory, like so: 
+
+```
+python3 ./bloodhound_import/__main__.py -du neo4j -dp bloodhound ../../20230106120106_*
+```
